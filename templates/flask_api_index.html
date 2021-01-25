@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="{{url_for('result')}}" method=post enctype="multipart/form-data">
+<dl>
+  <dt>アップロードする画像を選択して下さい</dt>
+  <dd><input type=file id="image" name=image></dd>
+  <dd><input type=submit value=送信></dd>
+</dl>
+ 
+</form>
+
+  {%if result_img %}
+  <h3>予想クラス</h3>
+  {{ predict_Confidence }}
+
+
+  <p>
+      <img src={{result_img}} class="image-vw">
+  </p>
+  {% endif %}
+{% endblock %}
