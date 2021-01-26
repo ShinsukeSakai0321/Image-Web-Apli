@@ -63,7 +63,7 @@ def result():
         predict_Confidence = img_pred(image_load)
 
         # render_template('./result.html')
-        return render_template('flask_api_index.html', title='予想クラス', predict_Confidence=predict_Confidence, result_img=img_url)
+        return render_template('flask_api_index.html', title='予想クラス', predict_Confidence=predict_Confidence, result_img=img_url,fname=filename)
 
 if __name__ == '__main__':
     app.debug = True

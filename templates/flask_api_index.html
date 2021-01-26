@@ -11,10 +11,9 @@
 </form>
 
   {%if result_img %}
-  <h3>予想クラス</h3>
+  <h3>予想クラス({{fname}})</h3>
   {{ predict_Confidence }}
-
-
+ 
   <p>
       <img src={{result_img}} class="image-vw">
   </p>
